@@ -1,0 +1,189 @@
+/* styles/maintenance.css - For 2 Simple Containers */
+.maintenance-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 2rem;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.maintenance-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.maintenance-header h1 {
+  font-size: 2.8rem;
+  background: linear-gradient(135deg, #10b981, #059669);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin: 0;
+  font-weight: 700;
+}
+
+.maintenance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.maintenance-card {
+  background: white;
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  border-left: 6px solid;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.maintenance-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--card-color, #10b981), transparent);
+}
+
+.maintenance-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  z-index: 2;
+  position: relative;
+}
+
+.card-status {
+  padding: 0.5rem 1.5rem;
+  border-radius: 25px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: green;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-body h3 {
+  font-size: 1.8rem;
+  color: #1f2937;
+  margin: 0;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+/* Active Card Specific Styles */
+.maintenance-card:nth-child(1) {
+  border-left-color: #10b981;
+}
+
+.maintenance-card:nth-child(1) .card-icon {
+  background: rgba(16, 185, 129, 0.2);
+  color: #10b981;
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+}
+
+.maintenance-card:nth-child(1) .card-status {
+  background: #10b981;
+}
+
+/* Not Active Card Specific Styles */
+.maintenance-card:nth-child(2) {
+  border-left-color: #6b7280;
+}
+
+.maintenance-card:nth-child(2) .card-icon {
+  background: rgba(107, 114, 128, 0.2);
+  color: #6b7280;
+  box-shadow: 0 8px 25px rgba(107, 114, 128, 0.3);
+}
+
+.maintenance-card:nth-child(2) .card-status {
+  background: #6b7280;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .maintenance-page {
+    padding: 1.5rem;
+  }
+  
+  .maintenance-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .maintenance-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .maintenance-card {
+    padding: 2rem;
+  }
+  
+  .card-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .maintenance-page {
+    padding: 1rem;
+  }
+  
+  .maintenance-card {
+    padding: 1.5rem;
+  }
+  
+  .card-body h3 {
+    font-size: 1.5rem;
+  }
+}
+
+/* Animation on load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.maintenance-card {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.maintenance-card:nth-child(2) {
+  animation-delay: 0.2s;
+}

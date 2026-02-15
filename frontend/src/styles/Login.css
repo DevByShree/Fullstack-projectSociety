@@ -1,0 +1,190 @@
+/* 🔥 COMPLETE LOGIN CSS WITH PASSWORD EYE - PERFECT! */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+    url('../assets/login-bg.JPEG') center/cover no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.login-form {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.login-form h2 {
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+/* 🔥 NORMAL INPUTS */
+.login-form input:not(.password-container input) {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.login-form input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52,152,219,0.2);
+}
+
+/* 🔥 PASSWORD CONTAINER WITH EYE */
+.password-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.password-container input {
+  width: 100%;
+  padding: 15px 50px 15px 20px; /* Right padding for eye */
+  margin-bottom: 0;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.password-eye {
+  position: absolute;
+  right: 15px;
+  top: 35%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 20px;
+  color: rgba(255,255,255,0.7);
+  transition: all 0.3s ease;
+  user-select: none;
+  padding: 5px;
+}
+
+.password-eye:hover {
+  color: #38bdf8;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.password-eye:active {
+  transform: translateY(-50%) scale(0.95);
+}
+
+.login-form button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.login-form button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.login-form button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(52,152,219,0.4);
+}
+
+/* 🔥 SIGNUP LINK */
+.signup-link {
+  margin-top: 20px;
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.signup-link a:hover {
+  color: #60c7f2;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+  }
+  
+  .login-form {
+    padding: 30px 25px;
+    margin: 10px;
+  }
+
+  .password-eye {
+    right: 12px;
+    font-size: 18px;
+  }
+}
+/* 🔥 FORGOT PASSWORD LINK */
+.forgot-password {
+  display: block;
+  text-align: right;
+  color: #38bdf8;
+  font-size: 14px;
+  text-decoration: none;
+  font-weight: 500;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.forgot-password:hover {
+  color: #60c7f2;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .forgot-password {
+    font-size: 13px;
+    text-align: left;
+  }
+}

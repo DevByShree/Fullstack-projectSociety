@@ -1,0 +1,149 @@
+/* 🔥 SIMPLE SIGNUP CSS */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: 
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.8)),
+    url('../assets/login-bg.JPEG') center/cover no-repeat;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding: 20px;
+}
+
+.login-form {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(20px);
+  padding: 40px;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 400px;
+  border: 1px solid rgba(255,255,255,0.2);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.login-form h2 {
+  text-align: center;
+  color: white;
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+
+.login-form input {
+  width: 100%;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-radius: 10px;
+  font-size: 16px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.login-form input::placeholder {
+  color: rgba(255,255,255,0.7);
+}
+
+.login-form input:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52,152,219,0.2);
+}
+
+.login-form button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #3498db, #2980b9);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.login-form button:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.login-form button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(52,152,219,0.4);
+}
+
+.login-form p {
+  margin-top: 20px;
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+  font-size: 14px;
+}
+
+/* 🔥 LOGIN LINK STYLING */
+.login-link {
+  margin-top: 20px;
+  color: rgba(255,255,255,0.9);
+  text-align: center;
+  font-size: 14px;
+}
+
+.login-link a {
+  color: #38bdf8; /* Change this color */
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.login-link a:hover {
+  color: #60c7f2;
+  text-decoration: underline;
+}
+
+.login-form p span {
+  color: #38bdf8;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.login-form p span:hover {
+  color: #60c7f2;
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .login-container {
+    padding: 15px;
+  }
+  
+  .login-form {
+    padding: 30px 25px;
+    margin: 10px;
+  }
+}
+.demo-tip {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background: #f0f9ff;
+  border-radius: 8px;
+  border-left: 4px solid #0ea5e9;
+  color: #0369a1;
+}
+
+input:disabled {
+  opacity: 0.7;
+  background: #f8fafc;
+  cursor: not-allowed;
+}
