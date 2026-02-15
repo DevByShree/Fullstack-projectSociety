@@ -1,7 +1,7 @@
 // pages/NotActive.jsx - ✅ ADMIN ONLY NEW TASK BUTTON + POPUP
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import "../styles/NotActive.css";
+import "../styles/notActive.css";
 
 // WALL
 import image1 from "../assets/window.jpeg";

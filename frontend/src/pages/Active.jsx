@@ -1,7 +1,7 @@
 // Maintenance.jsx - UPDATED with 2 more containers
 import React from 'react';
 import { Link } from 'react-router-dom';
-import "../styles/Active.css";
+import "../styles/active.css";
 
 function Maintenance() {
   const maintenanceItems = [
