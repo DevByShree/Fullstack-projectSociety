@@ -1,7 +1,7 @@
 // pages/NotActive.jsx - ✅ ADMIN ONLY NEW TASK BUTTON + POPUP
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import "../styles/notActive.css";
+import "../styles/notactive.css";
 
 // WALL
 import image1 from "../assets/window.jpeg";
@@ -40,7 +40,7 @@ function NotActive() {
   const [selectedImage, setSelectedImage] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentTitle, setCurrentTitle] = useState('');
-  
+
   // 🔥 NEW TASK MODAL STATE - ADMIN ONLY
   const [showNewTaskModal, setShowNewTaskModal] = useState(false);
 
@@ -120,7 +120,7 @@ function NotActive() {
           <div className="nav-brand">
             <h3>🏠 Mohit Residency</h3>
           </div>
-          
+
           <div className="nav-right">
             <Link to="/notifications" className="notification-btn">
               <div className="notification-icon">🔔</div>
@@ -138,7 +138,7 @@ function NotActive() {
                 <div className="profile-role">{role?.toUpperCase()}</div>
               </div>
               <i className="profile-arrow">▼</i>
-              
+
               {profileMenu && (
                 <div className="profile-dropdown">
                   <Link to="/profile" className="dropdown-item">Profile</Link>
@@ -244,7 +244,7 @@ function NotActive() {
             <h2>➕ Add New Maintenance Task</h2>
             <button className="modal-close" onClick={closeNewTaskModal}>×</button>
           </div>
-          
+
           <div className="modal-body">
             <div className="task-form">
               <div className="form-group">
@@ -276,7 +276,7 @@ function NotActive() {
               </div>
             </div>
           </div>
-          
+
           <div className="modal-footer">
             <button className="action-btn secondary" onClick={closeNewTaskModal}>
               Cancel
