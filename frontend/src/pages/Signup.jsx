@@ -38,26 +38,19 @@ function Signup() {
       localStorage.setItem("flatNo", flatNo);       // ← Profile
 
       alert("✅ Signup successful! Welcome to Mohit Residency");
-      
+
       // 🔥 3. AUTO LOGIN - Direct dashboard
       navigate("/login");
 
     } catch (err) {
       // 🔥 DEMO MODE (Backend nahi hai to)
       if (err.response?.status === 500 || !err.response) {
-        // Demo signup - save locally
-        localStorage.setItem("token", "demo-member-token");
-        localStorage.setItem("role", "member");
-        localStorage.setItem("name", name);
-        localStorage.setItem("email", email);
-        localStorage.setItem("phone", mobile);
-        localStorage.setItem("flatNo", flatNo);
-        
-        alert("✅ Demo Signup successful! Welcome!");
-        navigate("/dashboard");
+        alert("⚠️ Server issue. Please try again later.");
+        navigate("/login");   // NOT dashboard
         return;
       }
-      
+
+
       alert(err.response?.data?.message || "Signup failed ❌");
     } finally {
       setLoading(false);
@@ -122,7 +115,7 @@ function Signup() {
             required
             disabled={loading}
           />
-          <span 
+          <span
             className="password-eye"
             onClick={() => setShowPassword(!showPassword)}
           >
