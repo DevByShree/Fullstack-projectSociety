@@ -46,7 +46,7 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
             required
           />
-          <span 
+          <span
             className="password-eye"
             onClick={() => setShowPassword(!showPassword)}
           >
